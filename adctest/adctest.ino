@@ -1,16 +1,4 @@
 
- /*
-Watch video instruction for this code on YouTube https://youtu.be/znBiVlgV9JI
-Resource page for this lesson and code:
-http://robojax.com/course3
-Tutoril by https://youTube.com/@robojax
-
-/*
-Arduino code for ESP32 to measure any DC voltage
-written by Ahmad Shamshiri
-www.robojax.com
-Feb 19, 2024
-*/
 bool debug = false;
 //const int R1 = 4700;//we read the voltage acrosst this resistor ()
 //const int R2 = 43000;
