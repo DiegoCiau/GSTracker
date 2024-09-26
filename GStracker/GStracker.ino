@@ -7,11 +7,11 @@ XPowersPMU PMU;
 #define TINY_GSM_MODEM_SIM7080
 //Pines para las entradas, salidas e ignición
 #define ign 10
-#define in0 11
+#define in0 11 //azuk
 #define in1 12
 //#define BAT 12//utilizado para la conexión y desconexión de bateria(La segunda placa no utiliza este pin)
-#define rele0 13
-#define rele1 14
+#define out1 13 //amarllo
+#define out2 14  //naranja
 bool  level = false;
 
 //Pines para la comunicación RX,TX
@@ -36,7 +36,7 @@ const int R1carbackup = 5100;//we read the voltage acrosst this resistor (backup
 const int R2carbackup = 1800;
 
 const int VinPinbackup = 1; // GPIO1 Backup battery
-const int VinPincar = 9; // GPIO2 car battery
+const int VinPincar = 9; // GPIO9 car battery
 
 // PWM settings
 const int freq = 5000; // PWM frequency
@@ -213,12 +213,12 @@ void MonitorSerialRele(){
 
     // Verifica si el comando es 'ON' para encender el relé
     if (command.equalsIgnoreCase("ON")) {
-      digitalWrite(rele0, HIGH);  // Enciende el relé
+      digitalWrite(out1, HIGH);  // Enciende el relé
       Serial.println("Relé encendido");
     }
     // Verifica si el comando es 'OFF' para apagar el relé
     else if (command.equalsIgnoreCase("OFF")) {
-      digitalWrite(rele0, LOW);  // Apaga el relé
+      digitalWrite(out1, LOW);  // Apaga el relé
       Serial.println("Relé apagado");
     } else {
       Serial.println("Comando no reconocido. Usa 'ON' o 'OFF'.");
