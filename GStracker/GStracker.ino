@@ -76,8 +76,8 @@ void setup() {
   pinMode(ign,INPUT_PULLUP);
   pinMode(in0,INPUT_PULLUP);
   pinMode(in1,INPUT_PULLUP);
-  pinMode(rele0, OUTPUT);
-  pinMode(rele1, OUTPUT);
+  pinMode(out1, OUTPUT);
+  pinMode(out2, OUTPUT);
   ledcAttach(channelcar, freq, resolution);
   ledcAttach(channelbackup, freq, resolution);
   
